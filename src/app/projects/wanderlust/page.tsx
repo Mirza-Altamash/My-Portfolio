@@ -107,7 +107,7 @@ export default function WanderlustProject() {
               
               <div className="mt-8 space-y-4">
                 <a 
-                  href="https://github.com/Mirza-Altamash/WanderLust" 
+                  href="https://github.com/Mirza-Altamash/majorproject" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={buttonVariants({ variant: "default", className: "w-full rounded-xl shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all h-12 text-base" })}

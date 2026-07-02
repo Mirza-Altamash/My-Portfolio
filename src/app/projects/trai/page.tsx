@@ -132,7 +132,7 @@ export default function TraiProject() {
               
               <div className="mt-8 space-y-4">
                 <a 
-                  href="https://github.com/Mirza-Altamash/Trai-Complaints-Portal" 
+                  href="https://github.com/Mirza-Altamash/TRAI" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={buttonVariants({ variant: "default", className: "w-full rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all h-12 text-base" })}
