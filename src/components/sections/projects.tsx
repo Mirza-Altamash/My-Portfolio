@@ -65,7 +65,7 @@ export function Projects() {
           </h2>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-16 md:space-y-24 lg:space-y-32">
           {PROJECTS.map((project, index) => {
             const isEven = index % 2 === 0;
             return (
@@ -105,7 +105,7 @@ function ProjectRow({ project, isEven, index }: { project: ProjectProps, isEven:
   const opacity = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
   return (
-    <div ref={ref} className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 lg:gap-24 items-center group`}>
+    <div ref={ref} className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-16 xl:gap-24 items-center group`}>
       
       {/* Project Visual / Parallax Container */}
       <motion.div 

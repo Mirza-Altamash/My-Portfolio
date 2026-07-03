@@ -41,7 +41,7 @@ export default function TradeSphereProject() {
         
         <div className="mb-24">
           <Badge variant="outline" className="mb-6 glass px-4 py-1.5 text-emerald-500 border-emerald-500/20 uppercase tracking-widest text-xs font-black">E-Commerce Frontend</Badge>
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-foreground mb-8 leading-[0.9] uppercase">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-foreground mb-8 leading-[0.9] uppercase">
             TradeSphere <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-400 italic">Platform.</span>
           </h1>

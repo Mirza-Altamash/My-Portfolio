@@ -17,9 +17,9 @@ export function About() {
   const scale = useTransform(scrollYProgress, [0, 1], [0.95, 1.05]);
 
   return (
-    <div ref={containerRef} className="relative h-[250vh]">
+    <div ref={containerRef} className="relative lg:h-[250vh] flex flex-col lg:block py-20 lg:py-0">
       {/* Sticky Background / Title Area */}
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="lg:sticky lg:top-0 lg:h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ opacity: bgOpacity, scale }} className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
           <div className="text-[15vw] font-black text-muted/10 uppercase tracking-tighter whitespace-nowrap select-none">
             Systems Engineer
@@ -42,7 +42,7 @@ export function About() {
       </div>
 
       {/* Scrolling Content Panels */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 md:px-8 pb-32 -mt-[50vh]">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 md:px-8 lg:pb-32 mt-12 lg:-mt-[50vh]">
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="hidden lg:block" />
           

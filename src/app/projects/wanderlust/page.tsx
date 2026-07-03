@@ -39,7 +39,7 @@ export default function WanderlustProject() {
         
         <div className="mb-24">
           <Badge variant="outline" className="mb-6 glass px-4 py-1.5 text-accent border-accent/20 uppercase tracking-widest text-xs font-black">Full Stack Platform</Badge>
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-foreground mb-8 leading-[0.9] uppercase">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-foreground mb-8 leading-[0.9] uppercase">
             Wanderlust <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary italic">Booking.</span>
           </h1>

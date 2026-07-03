@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SectionWrapper } from "@/components/section-wrapper";
 import { Server, LayoutPanelLeft, Wrench, ShieldCheck, LucideIcon } from "lucide-react";
@@ -50,6 +50,14 @@ export function Skills() {
   const y1 = useTransform(scrollYProgress, [0, 1], [150, -150]);
   const y2 = useTransform(scrollYProgress, [0, 1], [-150, 150]);
 
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <SectionWrapper id="skills" className="bg-muted/5 relative overflow-hidden py-32">
       <div ref={containerRef} className="max-w-7xl mx-auto">
@@ -64,14 +72,14 @@ export function Skills() {
 
         <div className="grid md:grid-cols-2 gap-8 relative z-10">
           {/* Left Column moving up */}
-          <motion.div style={{ y: y1 }} className="flex flex-col gap-8">
+          <motion.div style={{ y: isMobile ? 0 : y1 }} className="flex flex-col gap-8">
             {SKILL_CATEGORIES.slice(0, 2).map((category) => (
               <SkillCard key={category.title} category={category} />
             ))}
           </motion.div>
           
           {/* Right Column moving down slightly for asymmetrical parallax */}
-          <motion.div style={{ y: y2 }} className="flex flex-col gap-8 md:mt-24">
+          <motion.div style={{ y: isMobile ? 0 : y2 }} className="flex flex-col gap-8 md:mt-24">
             {SKILL_CATEGORIES.slice(2, 4).map((category) => (
               <SkillCard key={category.title} category={category} />
             ))}

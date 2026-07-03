@@ -40,7 +40,7 @@ export default function TraiProject() {
         
         <div className="mb-24">
           <Badge variant="outline" className="mb-6 glass px-4 py-1.5 text-primary border-primary/20 uppercase tracking-widest text-xs font-black">Enterprise Web Application</Badge>
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-foreground mb-8 leading-[0.9] uppercase">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-foreground mb-8 leading-[0.9] uppercase">
             TRAI <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent italic">Workflow.</span>
           </h1>

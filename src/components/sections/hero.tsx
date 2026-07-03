@@ -39,15 +39,15 @@ export function Hero() {
     <div ref={containerRef} className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-background">
       {/* Dynamic Ambient Background */}
       <motion.div style={{ y: y1, opacity }} className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] min-w-[500px] rounded-full bg-primary/20 blur-[120px] mix-blend-screen" />
-        <div className="absolute bottom-[-20%] left-[-10%] w-[60vw] h-[60vw] min-w-[600px] rounded-full bg-accent/15 blur-[150px] mix-blend-screen" />
+        <div className="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] max-w-[500px] rounded-full bg-primary/20 blur-[120px] mix-blend-screen" />
+        <div className="absolute bottom-[-20%] left-[-10%] w-[60vw] h-[60vw] max-w-[600px] rounded-full bg-accent/15 blur-[150px] mix-blend-screen" />
         
         {/* Subtle dot matrix overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_20%,transparent_100%)]" />
       </motion.div>
 
       <SectionWrapper id="hero" className="relative z-10 pt-32 pb-12 w-full flex-1 flex flex-col justify-center">
-        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-20 items-center max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-20 items-center max-w-7xl mx-auto w-full">
           
           {/* Left Column: Typography & Story */}
           <motion.div style={{ scale, opacity }} className="flex flex-col relative z-20">
@@ -66,7 +66,7 @@ export function Hero() {
                 </motion.span>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-foreground leading-[1.05] mb-8 [perspective:1000px]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter text-foreground leading-[1.05] mb-8 [perspective:1000px]">
                 <div className="overflow-hidden"><motion.div variants={wordAnimation}>Engineering</motion.div></div>
                 <div className="overflow-hidden">
                   <motion.div variants={wordAnimation} className="flex items-center gap-4">
@@ -112,10 +112,10 @@ export function Hero() {
             </motion.div>
           </motion.div>
           {/* Right Column - Premium Identity Card */}
-          <div className="lg:w-[45%] relative hidden lg:flex items-center justify-center pt-8">
+          <div className="w-full lg:w-[45%] relative flex items-center justify-center pt-8 lg:pt-0 mt-12 lg:mt-0">
             <motion.div 
               style={{ y: y2 }}
-              className="relative w-full max-w-[420px] aspect-[4/5] z-10 group perspective-[1000px]"
+              className="relative w-full max-w-sm md:max-w-[420px] mx-auto aspect-[4/5] z-10 group perspective-[1000px]"
             >
               {/* Premium Glow */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/30 rounded-[3rem] blur-[100px] -z-10 opacity-70 group-hover:opacity-100 transition-opacity duration-700" />
